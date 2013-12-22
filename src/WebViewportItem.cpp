@@ -49,7 +49,7 @@
 #endif
 
 namespace {
-const int s_defaultPreferredWidth = 800;
+const int s_defaultPreferredWidth = 320;
 const int s_defaultPreferredHeight = 480;
 const qreal s_minZoomScale = .01; // arbitrary
 const qreal s_maxZoomScale = 10.; // arbitrary
@@ -60,7 +60,7 @@ const int s_zoomCommitTimerDurationMS = 100;
 const qreal s_zoomableContentMinWidth = 300.;
 const qreal s_zoomRectAdjustHeight = 5.;
 const qreal s_zoomRectAdjustWidth = 5.;
-const qreal s_dpiAdjustmentFactor = 1.5;
+const qreal s_dpiAdjustmentFactor = 1.0;
 }
 
 /*!
