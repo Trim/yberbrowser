@@ -172,7 +172,7 @@ void BrowsingView::resizeEvent(QGraphicsSceneResizeEvent* event)
 void BrowsingView::paint(QPainter* painter, const QStyleOptionGraphicsItem*, QWidget*)
 {
     // Default background.
-    painter->fillRect(rect(), QBrush(Qt::black));
+    painter->fillRect(rect(), QBrush(Qt::white));
 }
 
 void BrowsingView::load(const QUrl& url)
