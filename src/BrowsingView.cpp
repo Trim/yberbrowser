@@ -292,6 +292,14 @@ WebView* BrowsingView::newWindow()
 #else
     WebView* webView = new WebView();
     webView->setPage(new WebPage(webView, this));
+
+    /*
+     * Remove default '0' value to apply the s_defaultPreferred[Height|Width] set inside the WebViewportItem class for the ViewportSize of the QWebPage.
+     * This class modify the preferredContentSize of this QWebPage using the ViewportSize divided by the pixelScale.
+     */
+    if(!m_homeView){
+        webView->page()->setViewportSize(QSize(1,1));
+    }
 #endif
     m_windowList.append(webView);
     setActiveWindow(webView);
